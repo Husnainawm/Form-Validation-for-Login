@@ -104,7 +104,19 @@ function Form() {
             });
             return;
         }
-
+        if (state.Password.length<8) {
+            toast.error('Please Enter more then 8 letter Password', {
+                position: "top-right",
+                autoClose: 3000,
+                hideProgressBar: false,
+                closeOnClick: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+            });
+            return;
+        }
 
         {
             toast.success('SignUp Successful', {
@@ -120,7 +132,6 @@ function Form() {
 
             
             setDataSet((prev) => [...prev, state])
-            console.log(dataSet)
             
 
         }
